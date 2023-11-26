@@ -19,14 +19,7 @@ bool out_of_bounds_y(int y)
     return y < 0 || y > HEIGHT - RADIUS;
 }
 
-bool touched_chair(sf::Vector2f pos)
-{
-    // if (euclidian_distance(CHAIRPOS, pos) < 2 * RADIUS)
-    // {
-    //     return true;
-    // }
-    return false;
-}
+
 
 float magnitude(sf::Vector2f vec)
 {
@@ -50,4 +43,13 @@ sf::Vector2f random_direction()
     dir /= magnitude(dir);
 
     return dir;
+}
+
+bool check_bounds(sf::Vector2f pos)
+{
+    if (out_of_bounds_x(pos.x) || out_of_bounds_y(pos.y))
+    {
+        return false;
+    }
+    return true;
 }

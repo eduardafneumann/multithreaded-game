@@ -32,9 +32,29 @@ void create_objects(std::vector<sf::CircleShape> &objects)
     player.setFillColor(sf::Color::Blue);
     player.setPosition((WIDTH - RADIUS) / 2, (HEIGHT - RADIUS) / 2);
 
+    sf::CircleShape chair1(RADIUS);
+    chair1.setFillColor(sf::Color::Red);
+    chair1.setPosition(CHAIR1POS);
+
+    sf::CircleShape chair2(RADIUS);
+    chair2.setFillColor(sf::Color::Red);
+    chair2.setPosition(CHAIR2POS);
+
+    sf::CircleShape chair3(RADIUS);
+    chair3.setFillColor(sf::Color::Red);
+    chair3.setPosition(CHAIR3POS);
+
+    sf::CircleShape chair4(RADIUS);
+    chair4.setFillColor(sf::Color::Red);
+    chair4.setPosition(CHAIR4POS);
+
+    objects.push_back(player);
     objects.push_back(bot1);
     objects.push_back(bot2);
     objects.push_back(bot3);
     objects.push_back(bot4);
-    objects.push_back(player);
+    objects.push_back(chair1);
+    objects.push_back(chair2);
+    objects.push_back(chair3);
+    objects.push_back(chair4);
 }
