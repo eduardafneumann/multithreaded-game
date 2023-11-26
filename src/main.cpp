@@ -16,6 +16,7 @@
 
 bool window_is_open = false;
 int score = 0;
+std::vector<sf::CircleShape> objects;
 
 std::mutex move_mutex;
 std::mutex score_mutex;
@@ -77,7 +78,6 @@ int main()
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Trabalho prático de SO");
     window_is_open = true;
 
-    std::vector<sf::CircleShape> objects;
     create_objects(objects);
 
     int bot1 = BOT1;
