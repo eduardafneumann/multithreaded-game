@@ -7,7 +7,7 @@ SRC_FOLDER = ./src
 SRC_FILES = $(wildcard $(SRC_FOLDER)/*.cpp $(SRC_FOLDER)/**/*.cpp)
 
 BUILD_FOLDER = ./build
-TARGET_FILE = $(BUILD_FOLDER)/main
+TARGET_FILE = ./bin/multithreaded-game
 
 OBJ_FOLDER = $(BUILD_FOLDER)/obj
 OBJ_FILES = $(patsubst $(SRC_FOLDER)/%.cpp,$(OBJ_FOLDER)/%.o,$(SRC_FILES))
